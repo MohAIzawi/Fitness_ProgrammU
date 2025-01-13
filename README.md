@@ -1,3 +1,5 @@
+[![Python package](https://github.com/MohAIzawi/Fitness_ProgrammU/actions/workflows/python-package.yml/badge.svg)](https://github.com/MohAIzawi/Fitness_ProgrammU/actions/workflows/python-package.yml)
+
 # Fitness Program Generator
 
 ## Objectifs de l'application
