@@ -23,3 +23,17 @@ def generate_fitness_program(user_data):
     }
 
     return goals.get(user_data["goal"].lower(), lambda: ["Goal not supported"])()
+
+def suggest_improvements(activity_history):
+    if len(activity_history) < 2:
+        return "Not enough data to suggest improvements"
+
+    last_week = activity_history[-1]
+    previous_week = activity_history[-2]
+
+    if last_week > previous_week:
+        return "Great progress! Consider increasing intensity or duration."
+    elif last_week < previous_week:
+        return "Activity has decreased. Try to maintain consistency."
+    return "Consistency is key. Keep up the good work!"
+
