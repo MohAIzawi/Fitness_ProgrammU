@@ -11,9 +11,15 @@ def generate_fitness_program(user_data):
     if not validate_user_data(user_data):
         return None
 
-    goal = user_data["goal"].lower()
-    if goal == "weight_loss":
+    def weight_loss_program():
         return ["Cardio: 30 minutes, 5x per week", "Strength: 2x per week"]
-    elif goal == "muscle_gain":
+
+    def muscle_gain_program():
         return ["Strength: 4x per week", "Cardio: 15 minutes, 2x per week"]
-    return ["Goal not supported"]
+
+    goals = {
+        "weight_loss": weight_loss_program,
+        "muscle_gain": muscle_gain_program,
+    }
+
+    return goals.get(user_data["goal"].lower(), lambda: ["Goal not supported"])()
