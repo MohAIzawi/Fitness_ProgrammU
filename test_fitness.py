@@ -1,6 +1,7 @@
 import pytest
 from fitness import validate_user_data
 from fitness import generate_fitness_program
+from fitness import suggest_improvements
 
 def test_valid_user_data():
     assert validate_user_data({"age": 25, "weight": 70, "activity_level": "moderate", "goal": "weight_loss"})

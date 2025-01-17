@@ -28,12 +28,12 @@ def suggest_improvements(activity_history):
     if len(activity_history) < 2:
         return "Not enough data to suggest improvements"
 
-    last_week = activity_history[-1]
-    previous_week = activity_history[-2]
+    trends = activity_history[-2:]
+    change = trends[-1] - trends[0]
 
-    if last_week > previous_week:
+    if change > 0:
         return "Great progress! Consider increasing intensity or duration."
-    elif last_week < previous_week:
+    elif change < 0:
         return "Activity has decreased. Try to maintain consistency."
     return "Consistency is key. Keep up the good work!"
 
