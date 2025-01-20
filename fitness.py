@@ -3,8 +3,12 @@ def validate_user_data(user_data):
     for field in required_fields:
         if field not in user_data:
             return False
-    if user_data["age"] <= 0:
-        return False
+    try:
+        if int(user_data["age"]) <= 0:
+            return False
+        float(user_data["weight"])
+    except ValueError:
+        raise ValueError("Age and weight must be numbers.")
     return True
 
 def generate_fitness_program(user_data):
@@ -36,4 +40,3 @@ def suggest_improvements(activity_history):
     elif change < 0:
         return "Activity has decreased. Try to maintain consistency."
     return "Consistency is key. Keep up the good work!"
-

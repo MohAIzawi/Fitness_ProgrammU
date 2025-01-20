@@ -38,3 +38,13 @@ def test_suggest_improvements_negative_trend():
 def test_suggest_improvements_no_change():
     assert suggest_improvements([3, 3]) == "Consistency is key. Keep up the good work!"
 
+# Tests for error handling
+def test_invalid_data_types():
+    with pytest.raises(ValueError):
+        validate_user_data({"age": "vingt", "weight": "soixante", "activity_level": "modere", "goal": "perte de poids"})
+
+def test_extreme_values():
+    assert not validate_user_data({"age": 200, "weight": 70, "activity_level": "modere", "goal": "perte de poids"})
+
+def test_missing_all_fields():
+    assert not validate_user_data({})
