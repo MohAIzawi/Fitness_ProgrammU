@@ -21,9 +21,6 @@ Cette application a pour objectif de proposer des programmes de fitness personna
 
 ## Architecture générale de l'application
 - **Langage principal** : Python
-- **Dépendances** :
-  - Pandas (pour manipuler les données utilisateurs)
-  - NumPy (pour calculs et ajustements du programme)
 
 ## Instructions d'installation
 
