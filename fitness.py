@@ -4,9 +4,12 @@ def validate_user_data(user_data):
         if field not in user_data:
             return False
     try:
-        if int(user_data["age"]) <= 0:
+        age = int(user_data["age"])
+        weight = float(user_data["weight"])
+        if age <= 0 or age > 120:  # Assuming 120 is the upper limit for a reasonable age
             return False
-        float(user_data["weight"])
+        if weight <= 0:  # Adding a check for a reasonable weight
+            return False
     except ValueError:
         raise ValueError("Age and weight must be numbers.")
     return True
