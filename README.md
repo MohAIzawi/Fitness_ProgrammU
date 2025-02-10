@@ -56,3 +56,11 @@ Cette application a pour objectif de proposer des programmes de fitness personna
 2. **Tester l'application**
    ```bash
    python -m pytest -v
+
+Accès aux logs des tests
+Les logs des tests sont accessibles via l'onglet "Actions" de ce dépôt GitHub. Pour y accéder :
+
+Allez sur la page principale du dépôt.
+Cliquez sur l'onglet "Actions".
+Sélectionnez le workflow le plus récent pour voir les détails de l'exécution des tests.
+Vous pouvez également exécuter les tests localement et consulter les logs générés dans la console.

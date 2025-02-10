@@ -1,7 +1,7 @@
 from fitness import generate_fitness_program, suggest_improvements
 
 def main():
-    print("Welcome to the Fitness Program CLI!")
+    print("Welcome to the Fitness ProgramU!")
     print("Please answer the following questions to get your fitness program.")
 
     age = int(input("Enter your age: "))
